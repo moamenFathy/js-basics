@@ -126,11 +126,31 @@
 
   <!-- TEST -->
     <!-- <button id="myButton"> My Button </button> -->
-    <button class="myButtons"> Button 1</button>
+    <!-- <button class="myButtons"> Button 1</button>
     <button class="myButtons"> Button 2</button>
     <button class="myButtons"> Button 3</button>
-    <button class="myButtons"> Button 4</button>
+    <button class="myButtons"> Button 4</button> -->
   <!-- TEST -->
+
+  <h1>Rock - Paper - Scissors</h1>
+
+  <div class="choices">
+    <button onclick="playGame('rock')">👊</button>
+    <button onclick="playGame('paper')">🤚</button>
+    <button onclick="playGame('scissors')">✌️</button>
+  </div>
+
+  <div id="playerDisplay"> PLAYER: </div>
+  <div id="computerDisplay"> COMPUTER: </div>
+  <div id="resultDisplay"> IT"S A TIE! </div>
+
+  <div class="scoreDisplay"> Player Score:
+    <span id="playerScoreDisplay">0</span>
+  </div>
+
+  <div class="scoreDisplay"> Computer Score:
+    <span id="computerScoreDisplay">0</span>
+  </div>
   
   <script src="hi.js"></script>
   <script src="test.js"></script>

@@ -181,37 +181,37 @@
 //   if (event.target.classList.contains("disabled")) myButton.textContent += "😂";
 // });
 
-let myButtons = document.querySelectorAll(".myButtons");
+// let myButtons = document.querySelectorAll(".myButtons");
 
-myButtons.forEach(button => {
-  button.addEventListener("click", event => {
-    if (button.classList.contains("enabled")) button.classList.toggle("disabled");
-  });
-});
+// myButtons.forEach(button => {
+//   button.addEventListener("click", event => {
+//     if (button.classList.contains("enabled")) button.classList.toggle("disabled");
+//   });
+// });
 
-myButtons.forEach(button => {
-  button.addEventListener("click", event => {
-    button.classList.add("enabled");
-  });
-});
+// myButtons.forEach(button => {
+//   button.addEventListener("click", event => {
+//     button.classList.add("enabled");
+//   });
+// });
 
-myButtons.forEach(button => {
-  button.addEventListener("mouseover", event => {
-    event.target.classList.toggle("hover");
-  });
-});
+// myButtons.forEach(button => {
+//   button.addEventListener("mouseover", event => {
+//     event.target.classList.toggle("hover");
+//   });
+// });
 
-myButtons.forEach(button => {
-  button.addEventListener("mouseout", event => {
-    event.target.classList.toggle("hover");
-  });
-});
+// myButtons.forEach(button => {
+//   button.addEventListener("mouseout", event => {
+//     event.target.classList.toggle("hover");
+//   });
+// });
 
-myButtons.forEach(button => {
-  button.addEventListener("click", event => {
-    if (button.classList.contains("disabled")) button.textContent += "🐦‍🔥";
-  })
-})
+// myButtons.forEach(button => {
+//   button.addEventListener("click", event => {
+//     if (button.classList.contains("disabled")) button.textContent += "🐦‍🔥";
+//   });
+// });
 
 // myButtons.forEach(button => {
 //   button.addEventListener("click", event => {
