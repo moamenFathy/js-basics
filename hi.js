@@ -34,3 +34,48 @@
 //   const dark = document.getElementsByTagName('button');
 //   dark.style.backgroundColor = 'black';
 // }
+
+// function colorFlipper() {
+//   const body = document.body;
+  
+  // Simple color switching
+  // function colorSwitch(color) {
+  //     body.style.backgroundColor = color;
+  // }
+
+  // Generate random RGB color
+  // function randomColor() {
+  //     const red = Math.floor(Math.random() * 256);
+  //     const green = Math.floor(Math.random() * 256);
+  //     const blue = Math.floor(Math.random() * 256);
+  //     body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+  // }
+
+  // Reset to default
+  // function resetColor() {
+  //     body.style.backgroundColor = '#ffffff';
+  // }
+
+  // Add event listeners
+//   document.addEventListener('click', (e) => {
+//       if (e.target.matches('button')) {
+//           const action = e.target.id || e.target.className;
+//           switch (action) {
+//               case 'red':
+//               case 'green': 
+//               case 'blue':
+//                   colorSwitch(action);
+//                   break;
+//               case 'random':
+//                   randomColor();
+//                   break;
+//               case 'reset':
+//                   resetColor();
+//                   break;
+//           }
+//       }
+//   });
+// }
+
+// Initialize the color flipper
+// colorFlipper();

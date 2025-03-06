@@ -348,3 +348,75 @@
 //     console.error(error);
 //   }
 // }
+
+// const red = document.getElementById("red");
+// const green = document.getElementById("green");
+// const blue = document.getElementById("blue");
+// const reset = document.getElementById("resets");
+// var body = document.body;
+
+// function colorSwitch(color) {
+//   switch (color) {
+//     case "red":
+//       red.addEventListener("click", event => body.style.backgroundColor = "red");
+//       break;
+//     case "green":
+//       green.addEventListener("click", event => body.style.backgroundColor = "green");
+//       break;
+//     case "blue":
+//       blue.addEventListener("click", event => body.style.backgroundColor = "blue");
+//       break;
+//   }
+// }
+
+// function randomColor() {
+//   const red = Math.floor(Math.random() * 255);
+//   const green = Math.floor(Math.random() * 255);
+//   const blue = Math.floor(Math.random() * 255);
+//   body.style.background = `rgb(${red}, ${green}, ${blue})`;
+// }
+
+// function resetColor() {
+//   body.style.backgroundColor = "black";
+// }
+
+function colorFlipper() {
+  const body = document.body;
+
+  function colorSwitch(color) {
+    body.style.backgroundColor = color;
+  }
+
+  function randomColor() {
+    const red = Math.floor(Math.random() * 256);
+    const green = Math.floor(Math.random() * 256);
+    const blue = Math.floor(Math.random() * 256);
+    const random = body.style.background = `rgb(${red}, ${green}, ${blue})`;
+    console.log(random);
+  }
+
+  function resetColor() {
+    body.style.backgroundColor = "black";
+  }
+
+  document.addEventListener("click", event => {
+    if (event.target.matches("button")) {
+      const action = event.target.id || event.target.className;
+      switch(action) {
+        case "red":
+          case "green":
+            case "blue":
+              colorSwitch(action);
+              break;
+              case "random":
+                randomColor();
+                break;
+                case "reset":
+                  resetColor();
+                  break;
+                }
+              }
+  })
+}
+
+colorFlipper();
