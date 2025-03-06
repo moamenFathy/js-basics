@@ -18,7 +18,6 @@
 //   else theme.className = "light";
 // });
 
-
 // const small = document.getElementById("small");
 // const medium = document.getElementById("medium");
 // const large = document.getElementById("large");
@@ -75,7 +74,6 @@
 
 // console.log(myButton);
 
-
 // const myBox = document.getElementById("myBox");
 // moveAmount = 5;
 // let y = 0;
@@ -112,7 +110,6 @@
 //     myBox.style.left = `${x}px`;
 //   }
 // })
-
 
 // let buttons = document.querySelectorAll(".myButton");
 
@@ -221,3 +218,133 @@
 //   });
 // });
 
+// function task1(callback) {
+//   setTimeout(() => {
+//     console.log("Task 1 Completed");
+//     callback();
+//   }, 3000)
+// }
+
+// function task2(callback) {
+//   setTimeout(() => {
+//     console.log("Task 2 Completed");
+//     callback();
+//   }, 1000)
+// }
+
+// function task3(callback) {
+//   setTimeout(() => {
+//     console.log("Task 3 Completed");
+//     callback();
+//   }, 2000)
+// }
+
+// function task4(callback) {
+//   setTimeout(() => {
+//     console.log("Task 4 Completed");
+//     callback();
+//   }, 4000);
+// }
+
+// task1();
+// task2();
+// task3();
+// task4();
+// console.log("All Tasks Completed");
+
+// task1(() => {
+//   task2(() => {
+//     task3(() => {
+//       task4(() => console.log("All Tasks Completed"));
+//     });
+//   });
+// });
+
+// function dogWalked() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       walkingDog = true;
+
+//       if (walkingDog) resolve("You Walked The Dog🐕");
+//       else reject("You Didn't Walk The Dog");
+//     }, 1000);
+//   });
+// }
+
+// function takeOutTrash() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       trashOut = true;
+
+//       if (trashOut) resolve("You Take Out The Trash♻️");
+//       else reject("You Didn't Take Out The Trash");
+//     }, 500);
+//   });
+// }
+
+// function cleanKitchen() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       kitchenCleaned = true;
+//       if (kitchenCleaned) resolve("You Cleaned The Kitchen🧹");
+//       else reject("You Didn't Clean The Kitchen")
+//     }, 1500);
+//   });
+// }
+
+// callback Hell
+// dogWalked(() => {
+//   takeOutTrash(() => {
+//     cleanKitchen(() => console.log("All Chores Are Completed"));
+//   });
+// });
+
+// dogWalked().then(value => {console.log(value);return takeOutTrash();})
+//            .then(value => {console.log(value);return cleanKitchen();})
+//            .then(value => {console.log(value);return console.log("You Finished All The Chores");})
+//            .catch(error => console.error(error));
+
+// async function doChores() {
+
+//   try {
+//   const dogWalkedResult = await dogWalked();
+//   console.log(dogWalkedResult);
+
+//   const takeOutTrashResult = await takeOutTrash();
+//   console.log(takeOutTrashResult);
+
+//   const kitchenCleanedResult = await cleanKitchen();
+//   console.log(kitchenCleanedResult);
+
+//   console.log("YOU FINISHED");
+//   }
+
+//   catch(error) {
+//     console.error(error);
+//   }
+// }
+
+// doChores();
+
+// fetch("people.json")
+//       .then(response => response.json())
+//       .then(values => values.forEach(value => console.log(value.isEmployed)));
+
+
+// async function fetchData() {
+//   try {
+//     const pokemonInput = document.getElementById("pokemon").value.toLowerCase();
+//     const pokemonImg = document.getElementById("thePokemon");
+//     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonInput}`);
+//     if (!response.ok) {
+//       throw new Error("Can't fetch data from api")
+//     }
+//       const data = await response.json();
+//       const pokemonSprite = data.sprites.front_default;
+//       pokemonImg.src = pokemonSprite;
+//       pokemonImg.style.display = "block";
+//   }
+//   catch(error) {
+//     console.error(error);
+//   }
+// }

@@ -155,9 +155,9 @@
 // REMOVE HTML ELEMENT
 
 // document.body.removeChild(newH1);
-// document.getElementById('box1').removeChild(newH1); 
+// document.getElementById('box1').removeChild(newH1);
 // Access the dom.Parent.removeChild
-// New Method: removeChild(); remove the element 
+// New Method: removeChild(); remove the element
 
 // const newH1 = document.createElement("h1");
 
@@ -172,14 +172,11 @@
 // STEP 1 CREATE THE ELEMENT
 // const newListItem = document.createElement("li");
 
-
 // STEP 2 CREATE THE ATTRIBUTES/PROPERTIES
 // newListItem.textContent = 'coconut';
 // newListItem.id = 'coconut';
 // newListItem.style.fontWeight = 'bold';
 // newListItem.style.backgroundColor = 'lightgreen';
-
-
 
 // STEP 3 APPEND THE ELEMENT TO DOM
 // document.body.append(newListItem);
@@ -193,7 +190,6 @@
 // const listItem = document.querySelectorAll('#fruits li');
 // document.getElementById('fruits').insertBefore(newListItem, listItem[3]);
 
-
 // REMOVE HTML ELEMENT
 
 // document.getElementById('fruits').removeChild(newListItem);
@@ -201,8 +197,8 @@
 //?  MOUSE EVENTS
 
 // eventListener = Listen for specific events to create interactive web pages
-                  // events: click, mouseover, mouseout
-                  // .addEventListener(click, callback OR anonymous function OR arrow function);
+// events: click, mouseover, mouseout
+// .addEventListener(click, callback OR anonymous function OR arrow function);
 
 // const myBox = document.getElementById('myBox');
 // const myButton = document.getElementById('myButton');
@@ -232,11 +228,9 @@
 //   myBody.style.backgroundColor = 'red';
 // });
 
-
 //? eventListener = Listen for specific events to create interactive web pages
-                    // events: keydown, keyup
-                    // document.addEventListener(event, callback);
-
+// events: keydown, keyup
+// document.addEventListener(event, callback);
 
 // const myBox = document.getElementById("myBox");
 
@@ -256,7 +250,6 @@
 //   myBox.style.backgroundColor = "lightblue";
 // }
 // );
-
 
 // document.addEventListener("keydown", event => {
 //   if (event.key.startsWith("Arrow")) {
@@ -287,20 +280,20 @@
 // const myImg = document.getElementById("myImg");
 
 // myButton.addEventListener("click", event => {
-//   if (myImg.style.visibility === "hidden") { 
+//   if (myImg.style.visibility === "hidden") {
 //     myImg.style.visibility = "visible";
 //     myButton.textContent = "Hide";
 //   }
 //   else {
 //     myImg.style.visibility = "hidden";
 //     myButton.textContent = "show";
-//   } 
+//   }
 // });
 
 //? NodeList = Static collection of HTML elements by (id, class, element)
-                // Can be created by using querySelectorAll()
-                // similar to an array, butn no (Map, FileSystemEntry, reduce)
-                // NodeList won't update to automatically reflect changes
+// Can be created by using querySelectorAll()
+// similar to an array, butn no (Map, FileSystemEntry, reduce)
+// NodeList won't update to automatically reflect changes
 
 // let buttons = document.querySelectorAll(".myButton");
 
@@ -345,9 +338,9 @@
 // });
 
 //? ClassList = Element property in JavaScript used to interact
-                // with an element's list of classes (css classes)
-                // Allows you to make reusable classes for many Elemensts
-                // across your webpage.
+// with an element's list of classes (css classes)
+// Allows you to make reusable classes for many Elemensts
+// across your webpage.
 
 // add()
 // remove()
@@ -363,12 +356,12 @@
 // myButton.classList.add("hover")
 
 // myButton.addEventListener("mouseover", event => {
-  // event.target.classList.add("hover");
+// event.target.classList.add("hover");
 //   event.target.classList.toggle("hover");
 // });
 
 // myButton.addEventListener("mouseout", event => {
-  // event.target.classList.remove("hover");
+// event.target.classList.remove("hover");
 //   event.target.classList.toggle("hover");
 // });
 
@@ -382,8 +375,8 @@
 //   else {
 //     event.target.classList.replace("enabled", "disabled");
 //   }
-  // event.target.classList.replace("enabled", "disabled");
-  // myButton.classList.replace("enabled", "disabled")
+// event.target.classList.replace("enabled", "disabled");
+// myButton.classList.replace("enabled", "disabled")
 // });
 
 // myButton.addEventListener("click", event => {
@@ -393,8 +386,8 @@
 //   else {
 //     event.target.classList.replace("enabled", "disabled");
 //   }
-  // event.target.classList.replace("enabled", "disabled");
-  // myButton.classList.replace("enabled", "disabled")
+// event.target.classList.replace("enabled", "disabled");
+// myButton.classList.replace("enabled", "disabled")
 // });
 
 // let buttons = document.querySelectorAll(".myButtons");
@@ -429,52 +422,454 @@
 
 //? ROCK PAPER SCISSORS
 
-const choices = ["rock", "paper", "scissors"];
-const playerDisplay = document.getElementById("playerDisplay");
-const computerDisplay = document.getElementById("computerDisplay");
-const resultDisplay = document.getElementById("resultDisplay");
-const playerScoreDisplay = document.getElementById("playerScoreDisplay");
-const computerScoreDisplay = document.getElementById("computerScoreDisplay");
-let playerScore = 0;
-let computerScore = 0;
+// const choices = ["rock", "paper", "scissors"];
+// const playerDisplay = document.getElementById("playerDisplay");
+// const computerDisplay = document.getElementById("computerDisplay");
+// const resultDisplay = document.getElementById("resultDisplay");
+// const playerScoreDisplay = document.getElementById("playerScoreDisplay");
+// const computerScoreDisplay = document.getElementById("computerScoreDisplay");
+// let playerScore = 0;
+// let computerScore = 0;
 
-function playGame(playerChoice) {
-  const computerChoice = choices[Math.floor(Math.random() * 3)];
-  let result = "";
+// function playGame(playerChoice) {
+//   const computerChoice = choices[Math.floor(Math.random() * 3)];
+//   let result = "";
 
-  if (playerChoice === computerChoice) {
-    result = "IT's A TIE!"
-  }
-  else {
-    switch(playerChoice) {
-      case "rock":
-        result = (computerChoice === "scissors") ? "YOU WIN!" : "YOU LOSE!";
-        break;
-      case "paper": 
-        result = (computerChoice === "rock") ? "YOU WIN!" : "YOU LOSE!";
-        break;
-      case "scissors":
-        result = (computerChoice === "paper") ? "YOU WIN!" : "YOU LOSE!";
-        break;
+//   if (playerChoice === computerChoice) {
+//     result = "IT's A TIE!"
+//   }
+//   else {
+//     switch(playerChoice) {
+//       case "rock":
+//         result = (computerChoice === "scissors") ? "YOU WIN!" : "YOU LOSE!";
+//         break;
+//       case "paper":
+//         result = (computerChoice === "rock") ? "YOU WIN!" : "YOU LOSE!";
+//         break;
+//       case "scissors":
+//         result = (computerChoice === "paper") ? "YOU WIN!" : "YOU LOSE!";
+//         break;
+//     }
+//   }
+
+//   playerDisplay.textContent = `PLAYER: ${playerChoice}`;
+//   computerDisplay.textContent = `COMPUTER: ${computerChoice}`;
+//   resultDisplay.textContent = result;
+
+//   resultDisplay.classList.remove("greenText", "redText");
+
+//   switch(result) {
+//     case "YOU WIN!":
+//       resultDisplay.classList.add("greenText");
+//       playerScore++;
+//       playerScoreDisplay.textContent = playerScore;
+//       break;
+//     case "YOU LOSE!":
+//       resultDisplay.classList.add("redText");
+//       computerScore ++;
+//       computerScoreDisplay.textContent = computerScore;
+//       break;
+//   }
+// }
+
+//? img Slider
+
+// const slides = document.querySelectorAll(".slides img");
+// let slideIndex = 0;
+// let intervalId = null;
+
+// initializeSlider();
+// document.addEventListener("DOMContentLoaded", initializeSlider())
+
+// function initializeSlider() {
+
+//   if (slides.length > 0) {
+//     slides[slideIndex].classList.add("displaySlide");
+//     intervalId = setInterval(nextSlide, 5000);
+//     console.log(intervalId);
+//   }
+
+// }
+
+// function showSlide(index) {
+
+//   if (index >= slides.length) {
+//     slideIndex = 0;
+//   }
+//   else if(index < 0) {
+//     slideIndex = slides.length - 1;
+//   }
+//   slides.forEach(slide => {
+//     slide.classList.remove("displaySlide");
+//   });
+//   slides[slideIndex].classList.add("displaySlide");
+// }
+
+// function prevSlide() {
+//   clearInterval(intervalId);
+//   slideIndex--;
+//   showSlide(slideIndex);
+// }
+
+// function nextSlide() {
+//   slideIndex++;
+//   showSlide(slideIndex);
+// }
+
+// Callback Hell = Situation in JavaScript where callbacks
+// are nested within other callbacks to the
+// degree where the code is difficult to read.
+// old pattern to handle asynchronous function.
+// Use promises + async/await to avoid callback hell
+
+// function task1(callback) {
+//   setTimeout(() => {
+//     console.log("Task 1 complete");
+//     callback();
+//   }, 2000)
+// }
+
+// function task2(callback) {
+//   setTimeout(() => {
+//     console.log("Task 2 complete");
+//     callback();
+//   }, 1000);
+// }
+// function task3(callback) {
+//   setTimeout(() => {
+//     console.log("Task 3 complete");
+//     callback();
+//   }, 3000)
+// }
+
+// function task4(callback) {
+//   setTimeout(() => {
+//     console.log("Task 4 complete");
+//     callback();
+//   }, 4000);
+// }
+
+// task1(() => {
+//   task2(() => {
+//     task3(() => {
+//       task4(() => console.log("All tasks completed"));
+//     });
+//   });
+// });
+// task2();
+// task3();
+// task4();
+// console.log("All tasks complete");
+
+//? Promises = An Objec that manges asynchronous operation.
+// Wrap a Promise Object around {asynchronous code}
+// "I promise to return a value"
+// PENDING -> RESOLVED or REJECTED
+// new Promise((resolve, reject) => {asynchronous code});
+
+// DO THESE CHORES IN ORDER
+
+// 1. WALK THE DOG
+// 2. CLEAN THE KITCHEN
+// 3. TAKE OUT THE TRASH
+
+// function walkDog() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const dogWalked = true;
+
+//       if (dogWalked) resolve("You Walk The Dog 🐕");
+//       else reject("You Didn't Walk The Dog");
+//     }, 1500);
+//   });
+// }
+
+// function cleanKitchen() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       kitchenCleaned = true;
+
+//       if (kitchenCleaned) resolve("You clean the Kitchen 🧹");
+//       else reject("You Didn't Clean The Kitchen");
+//     }, 2000);
+//   });
+// }
+
+// function takeOutTrash() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       trashTaken = false;
+
+//       if (trashTaken) resolve("You Take Out The Trash ♻️");
+//       else reject("You Did'n Take The Trash")
+//     }, 500);
+//   });
+// }
+
+// walkDog(() => {
+//   cleanKitchen(() => {
+//     takeOutTrash(() => console.log("You Finished All The Chores!"));
+//   });
+// });
+
+// walkDog().then(value => {console.log(value); return cleanKitchen()})
+//          .then(value => {console.log(value); return takeOutTrash()})
+//          .then(value => {console.log(value); console.log("You Finished All The Chores!")})
+//          .catch(error => console.error(error));
+
+//? Async/Await = Async = makes a function return a promis
+                  // Await = makes an async functino wait for a promise
+                  // Allows you write asynchronous code in a synchrounous manner
+                  // Async doesn't have resolve or reject parameters
+                  // Everything after Await is placed in an event queue
+
+
+// function walkDog() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const dogWalked = true;
+
+//       if (dogWalked) resolve("You Walk The Dog 🐕");
+//       else reject("You Didn't Walk The Dog");
+//     }, 1500);
+//   });
+// }
+
+// function cleanKitchen() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       kitchenCleaned = true;
+
+//       if (kitchenCleaned) resolve("You clean the Kitchen 🧹");
+//       else reject("You Didn't Clean The Kitchen");
+//     }, 2000);
+//   });
+// }
+
+// function takeOutTrash() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       trashTaken = true;
+
+//       if (trashTaken) resolve("You Take Out The Trash ♻️");
+//       else reject("You Did'n Take The Trash")
+//     }, 500);
+//   });
+// }
+
+// async function doChores() {
+
+//   try {
+//   const walkDogResult = await walkDog();
+//   console.log(walkDogResult);
+
+//   const cleanKitchenResult = await cleanKitchen();
+//   console.log(cleanKitchenResult);
+
+//   const takeOutTrashResult = await takeOutTrash();
+//   console.log(takeOutTrashResult);
+
+//   console.log("YOU FINISHED");
+//   }
+//   catch(error) {
+//     console.error(error);
+//   }
+// }
+
+// doChores();
+
+//? JSON = (JavaScript Object Notation) data-interchange format
+          // used for exchanging data between a server and a web apllictaion
+          // JSON files {key:value} OR [value1, value2, value3]
+
+          // JSON.stringify() = converts a JS object || array to a JSON string.
+          // JSON.parse() = converts a JSON string to a JS object
+
+// const names = `["spongebob", "patrick", "squidward", "sandy"]`;
+// const jsonNames = `["spongebob", "patrick", "squidward", "sandy"]`;
+
+// const person = `{"name": "spongebob", "age" : 30, "isEmployed": true, "hobbies": ["Jellyfishing", "karate", "cooking"]}`;
+// const jsonPerson = `{"name": "spongebob", "age" : 30, "isEmployed": true, "hobbies": ["Jellyfishing", "karate", "cooking"]}`;
+
+// const people = `[{"name": "Spongebob", "age" : 30, "isEmployed": true},
+//                   {"name": "Patrick", "age" : 34, "isEmployed": false},
+//                   {"name": "Squidward", "age" : 50, "isEmployed": true},
+//                   {"name": "Sandy", "age" : 27, "isEmployed": true}]`;
+// const jsonPeople = `[{"name": "Spongebob", "age" : 30, "isEmployed": true},
+//                   {"name": "Patrick", "age" : 34, "isEmployed": false},
+//                   {"name": "Squidward", "age" : 50, "isEmployed": true},
+//                   {"name": "Sandy", "age" : 27, "isEmployed": true}]`;
+
+// const jsonString = JSON.stringify(names);
+
+// console.log(names); // print object
+// console.log(jsonString); // print array
+
+// const jsonString = JSON.stringify(person);
+
+// console.log(jsonString);
+// console.log(person);
+
+// const jsonString = JSON.stringify(people);
+// console.log(jsonString); 
+// console.log(people);
+
+// const parsedData = JSON.parse(jsonNames);
+
+// console.log(parsedData); // print object
+// console.log(jsonNames); // print array
+
+// const parsedData = JSON.parse(jsonPeople);
+
+// console.log(parsedData);
+
+// fetch("people.json")
+//     .then(response => response.json())
+//     .then(values => values.forEach(value => console.log(value)))
+//     .catch(error => console.error(error));
+
+// fetch("people.json")
+//     .then(response => response.json())
+//     .then(values => values.forEach(value => console.log(value.name)))
+//     .catch(error => console.error(error));
+
+//? fetch = function used for making http requests to fetch resources
+//          (JSON style data, images, files)
+//          simplifies asynchronous data fetching in javascript and
+//          used for interacting with APIs to retrieve and send
+//          data asynchronously over the web.
+//          fetch(url, {options})
+
+// fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+//     .then(response => {
+
+//       if (!response.ok) {
+//         throw new Error("could not fetch resource");
+//       }
+//       return response.json();
+//     })
+//     .then(data => console.log(data.id))
+//     .catch(error => console.log(error));
+
+
+// fetchData();
+async function fetchData() {
+  try {
+    const pokemonName = document.getElementById("pokemonName").value.toLowerCase();
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
+    if (!response.ok) {
+      throw new Error("Could not fetch resource");
     }
+    const data = await response.json();
+    const pokemonSprite = data.sprites.front_default;
+    const imgElement = document.getElementById("pokemonSprite");
+    imgElement.src = pokemonSprite;
+    imgElement.style.display = "block";
   }
-
-  playerDisplay.textContent = `PLAYER: ${playerChoice}`;
-  computerDisplay.textContent = `computer: ${computerChoice}`;
-  resultDisplay.textContent = result;
-
-  resultDisplay.classList.remove("greenText", "redText");
-
-  switch(result) {
-    case "YOU WIN!":
-      resultDisplay.classList.add("greenText");
-      playerScore++;
-      playerScoreDisplay.textContent = playerScore;
-      break;
-    case "YOU LOSE!":
-      resultDisplay.classList.add("redText");
-      computerScore ++;
-      computerScoreDisplay.textContent = computerScore;
-      break;
+  catch(error) {
+    console.error(error);
   }
 }
+
+//? Weather APP
+
+// const weatherForm = document.querySelector(".weatherForm");
+// const cityInput = document.querySelector(".cityInput");
+// const card = document.querySelector(".card");
+// const apiKey = "de6b66a46b3acafcff7749637b4901be";
+
+// weatherForm.addEventListener("submit", async event => {
+// event.preventDefault();
+
+//   const city = cityInput.value;
+
+//   if (city) {
+//     try {
+//       const weatherData = await getWeatherData(city);
+//       displayWeatherInfo(weatherData);
+//     }
+//     catch(error) {
+//       console.log(error);
+//       displayError(error);
+//     }
+//   }
+//   else {
+//     displayError("Please Enter A City");
+//   }
+// });
+
+// async function getWeatherData(city) {
+//   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+
+//   const response = await fetch(apiUrl);
+//   if (!response.ok) {
+//     throw new Error("could not fetch weather data");
+//   }
+//   return await response.json();
+// }
+
+// function displayWeatherInfo(data) {
+//   const {name: city, main: {temp, humidity}, weather: [{description, id}]} = data;
+//   card.textContent = "";
+//   card.style.display = "flex";
+
+//   const cityDisplay = document.createElement("h1");
+//   const tempDisplay = document.createElement("p");
+//   const humidityDisplay = document.createElement("p");
+//   const descDisplay = document.createElement("p");
+//   const weatherEmoji = document.createElement("p");
+
+//   cityDisplay.textContent = city;
+//   tempDisplay.textContent = `${(temp - 273.15).toFixed()}°c`;
+//   humidityDisplay.textContent = `Humidity: ${humidity}%`;
+//   descDisplay.textContent = description;
+//   weatherEmoji.textContent = getWeatherEmoji(id);
+
+//   cityDisplay.classList.add("cityDisplay");
+//   tempDisplay.classList.add("tempDisplay");
+//   humidityDisplay .classList.add("humidityDisplay");
+//   descDisplay.classList.add("descDisplay");
+//   weatherEmoji.classList.add("weatherEmoji");
+
+//   card.appendChild(cityDisplay);
+//   card.appendChild(tempDisplay);
+//   card.appendChild(humidityDisplay);
+//   card.appendChild(descDisplay);
+//   card.appendChild(weatherEmoji);
+// }
+
+// function getWeatherEmoji(weatherId) {
+//   switch(true) {
+//     case(weatherId >= 200 && weatherId < 300):
+//       return "⛈️";
+//     case(weatherId >= 300 && weatherId < 400):
+//       return "🌦️";
+//     case(weatherId >= 500 && weatherId < 600):
+//       return "🌧️";
+//     case(weatherId >= 600 && weatherId < 700):
+//       return "❄️";
+//     case(weatherId >= 700 && weatherId < 800):
+//       return "🌫️";
+//     case(weatherId === 800):
+//       return "☀️";
+//     case(weatherId >= 801 && weatherId < 810):
+//       return "☁️";
+//     default:
+//       return "?";
+//   }
+// } 
+
+// function displayError(message) {
+//   const errorDisplay = document.createElement("p");
+//   errorDisplay.textContent = message;
+//   errorDisplay.classList.add("errorDisplay");
+
+//   card.textContent = "";
+//   card.style.display = "flex";
+//   card.appendChild(errorDisplay);
+// }
+
+
+// while (true) {
+//   console.log("#");
+// }
